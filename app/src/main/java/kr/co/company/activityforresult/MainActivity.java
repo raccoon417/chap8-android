@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
 
         Button button = (Button) findViewById(R.id.button);
         text1 = (TextView) findViewById(R.id.text1);
-        text2 = (TextView) findViewById(R.id.text2);
+        text2 = (TextView) findViewById(R.id.text2); // 아이디로 텍스트뷰 위치 찾기
         button.setOnClickListener(new View.OnClickListener() {
             // @Override
             public void onClick(View arg0) {
-                Intent in = new Intent(MainActivity.this, SubActivity.class);
+                Intent in = new Intent(MainActivity.this, SubActivity.class); //인텐트 시작
 
                 startActivityForResult(in, GET_STRING);
             }
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == GET_STRING) {
             if (resultCode == RESULT_OK) {
                 text1.setText(data.getStringExtra("string1"));
-                text2.setText(data.getStringExtra("string2"));
+                text2.setText(data.getStringExtra("string2")); // 텍스트뷰 입력값으로 변경
             }
         }
     }

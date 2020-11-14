@@ -14,15 +14,15 @@ import android.widget.TextView;
 
 public class SubActivity extends AppCompatActivity {
     static final int GET_STRING = 1;
-    EditText edit;
-    TextView second_text;
-    String[] string = new String[] {"SubActivity1_text", "SubActivity2_text"};
+    EditText edit; // 입력창
+    TextView second_text; //두번째 값 표시위한 TextView선언
+    String[] string = new String[] {"SubActivity1_text", "SubActivity2_text"}; // 값 저장을 위한 배열생성
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sub);
         edit = (EditText) findViewById(R.id.edit);
-        second_text = (TextView) findViewById(R.id.second_text);
+        second_text = (TextView) findViewById(R.id.second_text); //아이디로 TextView 찾기
 
         Button button_ok = (Button) findViewById(R.id.button_ok);
         button_ok.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +31,7 @@ public class SubActivity extends AppCompatActivity {
 
                 Intent intent = new Intent();
                 intent.putExtra("string1", string[0]);
-                intent.putExtra("string2", string[1]);
+                intent.putExtra("string2", string[1]); // 인텐트에 값 넣기
                 setResult(RESULT_OK, intent);
                 finish();
             }
@@ -61,7 +61,7 @@ public class SubActivity extends AppCompatActivity {
         if (requestCode == GET_STRING) {
             if (resultCode == RESULT_OK) {
                 string[1] = data.getStringExtra("second_text");
-                second_text.setText(string[1]);
+                second_text.setText(string[1]); // 2차입력값 1차에서 보이기
             }
         }
     }
