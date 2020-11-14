@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ActivityForResult_201713068.iml" filepath="$PROJECT_DIR$/.idea/modules/ActivityForResult_201713068.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ActivityForResult_201713068.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ActivityForResult_201713068.app.iml" />
+    </modules>
+  </component>
+</project>
