@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     static final int GET_STRING = 1;
     TextView text1;
-    TextView text2;
+    TextView text2; // TextView 선언
 
     @Override
     public void onCreate(Bundle icicle) {

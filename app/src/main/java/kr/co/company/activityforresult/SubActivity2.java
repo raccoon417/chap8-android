@@ -32,7 +32,7 @@ public class SubActivity2 extends AppCompatActivity {
         button_cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setResult(RESULT_CANCELED);
-                //finish();
+                finish();
             }
         });
     }
